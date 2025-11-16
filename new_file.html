@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的大学学习主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 1rem auto; /* 移动端减少上下边距 */
+            padding: 0 1rem; /* 移动端缩小左右内边距 */
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1.5rem 1rem; /* 移动端缩小 padding */
+            background: linear-gradient(120deg, #4285f4, #34a853);
+            color: white;
+            border-radius: 8px;
+        }
+        header h1 {
+            font-size: 1.8rem; /* 移动端缩小标题字号 */
+        }
+        header p {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+        section {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #4285f4;
+            margin-bottom: 1rem;
+            border-left: 4px solid #4285f4;
+            padding-left: 0.8rem;
+            font-size: 1.4rem; /* 移动端缩小二级标题字号 */
+        }
+        /* 个人简介样式（响应式调整） */
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center; /* 移动端居中对齐 */
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px; /* 移动端缩小头像尺寸 */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4285f4;
+        }
+        .profile-info p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+        /* 表格响应式：小屏幕横向滚动 */
+        .plan-table-container {
+            overflow-x: auto; /* 移动端表格可横向滚动 */
+        }
+        .plan-table {
+            width: 100%;
+            min-width: 350px; /* 表格最小宽度，避免过度压缩 */
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .plan-table th, .plan-table td {
+            border: 1px solid #ddd;
+            padding: 0.6rem; /* 移动端缩小表格内边距 */
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        .plan-table th {
+            background-color: #f0f7ff;
+            white-space: nowrap; /* 表头不换行 */
+        }
+        /* 视频响应式：高度自适应 */
+        video {
+            width: 100%;
+            height: auto; /* 移动端视频高度自适应，避免拉伸 */
+            max-height: 400px; /* 限制最大高度，避免过大 */
+            border-radius: 4px;
+        }
+        .resource-list {
+            list-style: none;
+        }
+        .resource-list li {
+            margin: 0.8rem 0;
+            font-size: 0.95rem;
+        }
+        .resource-list a {
+            color: #4285f4;
+            text-decoration: none;
+        }
+        .resource-list a:hover {
+            text-decoration: underline;
+        }
+        .qrcode-box {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        .qrcode-box img {
+            width: 120px;
+            height: 120px; /* 移动端缩小二维码尺寸 */
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+        .qrcode-box p {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        /* 学习体会文本适配 */
+        section p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header>
+            <h1>我的大学学习主页</h1>
+            <p>记录成长 · 规划未来</p >
+        </header>
+
+        <!-- 个人简介部分 -->
+        <section>
+            <h2>个人简介</h2>
+            <div class="profile">
+                <!-- 替换为自己的头像图片 -->
+                < img src="avatar.jpg" alt="我的头像" class="profile-img">
+                <div class="profile-info">
+                    <p><strong>姓名：</strong>XXX</p >
+                    <p><strong>年级专业：</strong>2025级XX专业</p >
+                    <p><strong>兴趣方向：</strong>专业相关领域+阅读+运动</p >
+                    <p><strong>个人标签：</strong>自主学习爱好者 | 社团活动积极分子 | 生活记录者</p >
+                </div>
+            </div>
+        </section>
+
+        <!-- 大学四年学习计划（添加滚动容器） -->
+        <section>
+            <h2>大学四年学习计划</h2>
+            <div class="plan-table-container">
+                <table class="plan-table">
+                    <thead>
+                        <tr>
+                            <<th>学年</</th>
+                            <<th>核心目标</</th>
+                            <<th>具体计划</</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>大一</td>
+                            <td>适应大学节奏+夯实基础</td>
+                            <td>1. 学好高数/英语/专业基础课；2. 加入1个学习类社团；3. 掌握Office+基础编程技能</td>
+                        </tr>
+                        <tr>
+                            <td>大二</td>
+                            <td>专业深化+技能拓展</td>
+                            <td>1. 考取1-2个专业证书；2. 参与学科竞赛/科研项目；3. 学习专业进阶软件</td>
+                        </tr>
+                        <tr>
+                            <td>大三</td>
+                            <td>实践积累+方向明确</td>
+                            <td>1. 完成专业实习；2. 确定考研/就业方向；3. 准备相关备考/求职材料</td>
+                        </tr>
+                        <tr>
+                            <td>大四</td>
+                            <td>成果落地+顺利过渡</td>
+                            <td>1. 高质量完成毕业设计；2. 完成考研复试/入职准备；3. 总结大学经验</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 学习体会与反思 -->
+        <section>
+            <h2>开学至今的学习体会与反思</h2>
+            <p><strong>学习体会：</strong>大学学习更注重“自主性”，通过社团活动和小组作业，学会了团队协作与时间管理，专业课程的“理论+案例”模式让我对学科有了更具象的认知。</p >
+            <p><strong>学习反思：</strong>前期存在“拖延症”，导致部分作业质量不高；课堂笔记不够系统化，复习效率低。后续会用“番茄工作法”规划时间，用思维导图整理笔记。</p >
+        </section>
+
+        <!-- 学习+生活展示（视频） -->
+        <section>
+            <h2>个人学习+生活展示</h2>
+            <!-- 本地视频示例（响应式尺寸） -->
+            <video controls>
+                <source src="study-life.mp4" type="video/mp4">
+                <source src="study-life.webm" type="video/webm">
+                您的浏览器不支持视频播放，请升级浏览器。
+            </video>
+            <p>视频内容：课堂笔记展示+图书馆自习片段+社团活动记录</p >
+        </section>
+
+        <!-- 学习资源 -->
+        <section>
+            <h2>学习资源汇总</h2>
+            <ul class="resource-list">
+                <li>→ <a href=" " target="_blank">中国大学MOOC（专业课程资源）</a ></li>
+                <li>→ <a href="https://www.bilibili.com/" target="_blank">B站学习区（编程/考证教程）</a ></li>
+                <li>→ <a href="https://scholar.google.com/" target="_blank">谷歌学术（论文检索）</a ></li>
+                <li>→ <a href="https://www.zhihu.com/" target="_blank">知乎（学习经验分享）</a ></li>
+            </ul>
+        </section>
+
+        <!-- 提交信息 -->
+        <section>
+            <h2>主页访问信息</h2>
+            <!-- 替换为你的实际网页链接 -->
+            <p>个人学习主页网址：<a href="https://my-college-study-page.github.io" target="_blank">https://my-college-study-page.github.io</a ></p >
+            <div class="qrcode-box">
+                <p>网页跳转二维码：</p >
+                <!-- 替换为对应链接的二维码图片 -->
+                < img src="qrcode.png" alt="网页二维码" title="扫码跳转学习主页">
+            </div>
+        </section>
+    </div>
+</body>
+</html>
